@@ -13,14 +13,15 @@ driver.get("https://wikipedia.com")
 
 # 1 > ID
 el1 = driver.find_element("id","searchInput")
-# print(el1)
+print(el1)
 el1.send_keys("Hello World")
+sleep(3)
 
 # 2 > Xpath
 el2 = driver.find_element('xpath',"//input[@type='search']")
-# print(el2)
-# assert el1 == el2
-el3 = driver.find_element('xpath',"//*[type()='Italiano']")
+print(el2)
+assert el1 == el2
+el3 = driver.find_element('xpath',"//*[text()='Italiano']")
 el3.click()
 sleep(3)
 

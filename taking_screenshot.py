@@ -19,7 +19,7 @@ service_obj = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service_obj)
 
 
-driver.get("https://www.yahooe.com/")
+driver.get("https://www.amazon.com/")
 sleep(3)
 driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
 sleep(10)
