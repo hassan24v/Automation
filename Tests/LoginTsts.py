@@ -1,9 +1,9 @@
 from time import sleep
-from Login import Login
+from Pages.Login import Login
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from MainPage import MainPage
+from Pages.MainPage import MainPage
 
 service_obj = Service(ChromeDriverManager().install())
 

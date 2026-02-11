@@ -3,15 +3,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from Locators import *
+
 
 class MainPage:
     def __init__(self,driver):
         self.driver = driver
-        self.dashbord_lable_class =  (By.XPATH, "//*[@class='oxd-text oxd-text--span oxd-main-menu-item--name']"
-        )
+        self.dashbord_lable_class =  dashbord_lable_class
         self.wait = WebDriverWait(driver, 10)  # تعریف WebDriverWait
 
     def check_main_page(self):
-        #استفاده صحیح از Unpacking (*): اکنون self.driver.find_element(*self.dashbord_lable_class)
-        #به درستی تاپل را به دو آرگومان جداگانه (نوع و مقدار) شکسته و به متد ارسال می‌کند. این مشکل سینتکسی حل شده است.
-        self.driver.find_element(*self.dashbord_lable_class)
+        #self.driver.find_element(dashbord_lable_class)
+        self.wait.until(EC.visibility_of_element_located(self.dashbord_lable_class))
