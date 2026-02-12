@@ -8,3 +8,7 @@ login_button_clickable = (By.XPATH, "//button[@type='submit']")
 
 #لوکیتورهای مورد نیاز برای صفحه اصلی پس از لاگین
 dashbord_lable_class =  (By.XPATH, "//*[@class='oxd-text oxd-text--span oxd-main-menu-item--name']")
+
+#  لوکیتور جدید برای تست شکست (پیام خطا)
+# بر اساس ساختار استاندارد OrangeHRM:
+ERROR_MESSAGE_XPATH = (By.XPATH, "//div[@role='alert']")
